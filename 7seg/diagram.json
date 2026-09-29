@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "ESP32 7 Segment",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-7segment",
+      "id": "display",
+      "top": 14.58,
+      "left": 254.68,
+      "attrs": { "common": "cathode", "color": "red" }
+    }
+  ],
+  "connections": [
+    [ "esp:4", "display:A", "green", [ "h350.44", "v-153.6", "h-117.88" ] ],
+    [ "esp:5", "display:B", "green", [ "h283.24", "v-105.6", "h-41.08" ] ],
+    [ "esp:18", "display:C", "green", [ "v28.8", "h232.56" ] ],
+    [ "esp:19", "display:D", "green", [] ],
+    [ "esp:21", "display:E", "green", [] ],
+    [ "esp:22", "display:F", "green", [] ],
+    [ "esp:23", "display:G", "green", [] ],
+    ["esp:25", "display:DP", "green", []],
+    [ "esp:GND.1", "display:COM", "black", [] ]
+  ],
+  "dependencies": {}
+}

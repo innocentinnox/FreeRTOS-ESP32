@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Innocent",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-s3-devkitc-1", "id": "esp", "top": 38.22, "left": 590.17, "attrs": {} },
+    { "type": "wokwi-lcd1602", "id": "lcd1", "top": -15.77, "left": -80, "attrs": {} }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "lcd1:VSS", "esp:GND.1", "black", [ "v153.6", "h624.05" ] ],
+    [ "lcd1:VDD", "esp:5V", "red", [ "v144", "h614.55" ] ],
+    [ "lcd1:V0", "esp:GND.1", "black", [ "v153.6", "h604.55" ] ],
+    [ "lcd1:RW", "esp:GND.1", "black", [ "v153.6", "h585.55" ] ],
+    [ "lcd1:D5", "esp:7", "green", [ "v9.6", "h518.55" ] ],
+    [ "lcd1:D6", "esp:15", "green", [ "v19.2", "h509.05" ] ],
+    [ "lcd1:D7", "esp:16", "green", [ "v28.8", "h499.55" ] ],
+    [ "lcd1:A", "esp:5V", "red", [ "v144", "h489.55" ] ],
+    [ "lcd1:K", "esp:GND.1", "black", [ "v153.6", "h480.05" ] ],
+    [ "lcd1:RS", "esp:4", "orange", [ "v76.8", "h432.3", "v0", "h134.4", "v-86.4" ] ],
+    [ "lcd1:E", "esp:5", "gold", [ "v67.2", "h288", "v0", "h240", "v-67.2" ] ],
+    [ "lcd1:D4", "esp:6", "green", [ "v38.4", "h528", "v-38.4" ] ]
+  ],
+  "dependencies": {}
+}

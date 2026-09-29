@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "build/four_7seg_dp.bin"
+elf = "build/four_7seg_dp.elf"
