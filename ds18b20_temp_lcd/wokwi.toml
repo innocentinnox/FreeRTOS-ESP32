@@ -1,0 +1,4 @@
+[wokwi]
+version = 1
+firmware = "build/ds18b20_temp_lcd.bin"
+elf = "build/ds18b20_temp_lcd.elf"
