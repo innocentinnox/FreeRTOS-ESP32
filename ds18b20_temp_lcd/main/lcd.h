@@ -4,13 +4,17 @@
 #include <stdint.h>
 #include "driver/gpio.h"
 
-/* ---------------- LCD pins (matching lcd_parallel) ---------------- */
-#define LCD_RS   GPIO_NUM_4      /* Register Select: 0 = command, 1 = data */
-#define LCD_EN   GPIO_NUM_5      /* Enable: high-to-low pulse latches data */
-#define LCD_D4   GPIO_NUM_6
-#define LCD_D5   GPIO_NUM_7
-#define LCD_D6   GPIO_NUM_15
-#define LCD_D7   GPIO_NUM_16
+/* ---------------- I2C bus (PCF8574 backpack, matching lcd_i2c) ---------------- */
+#define LCD_I2C_SDA      GPIO_NUM_8
+#define LCD_I2C_SCL      GPIO_NUM_9
+#define LCD_I2C_FREQ_HZ  100000
+#define LCD_I2C_ADDR     0x27        /* PCF8574 default (0x3F on PCF8574A) */
+
+/* ---------------- PCF8574 bits (P4..P7 carry D4..D7) ---------------- */
+#define PCF_RS   0x01                /* Register Select: 0 = command, 1 = data */
+#define PCF_RW   0x02                /* always 0: write only                   */
+#define PCF_EN   0x04                /* Enable: high-to-low pulse latches data */
+#define PCF_BL   0x08                /* backlight on                           */
 
 /* ---------------- LCD command codes ---------------- */
 #define CMD_CLEAR_DISPLAY       0x01

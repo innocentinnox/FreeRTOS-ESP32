@@ -83,7 +83,7 @@ void app_main(void)
 {
     ESP_LOGI(TAG, "Initializing DS18B20 + LCD System...");
 
-    /* 1. Initialize LCD (parallel 4-bit mode) */
+    /* 1. Initialize LCD (4-bit mode through the I2C backpack) */
     lcd_init();
     lcd_clear();
     lcd_set_cursor(0, 0);
